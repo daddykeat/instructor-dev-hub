@@ -45,6 +45,7 @@
   --color-text-heading: var(--gray-900);
   --color-surface: var(--gray-50);
   --color-surface-raised: var(--gray-0);
+  --color-code-surface: var(--gray-100);
   --color-border: var(--gray-300);
   --color-action: var(--blue-800);
   --color-focus: var(--blue-600);
@@ -92,6 +93,7 @@
 :root {
   --font-body: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-display: "Chakra Petch", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
 }
 
 /* Primitive type-scale tokens: fluid font sizes bounded for 320–1280px viewports. */
@@ -113,4 +115,10 @@
   --type-h6: var(--type-sm);
   --type-body: var(--type-base);
   --type-meta: var(--type-sm);
+}
+
+/* Leading tokens: line-height ratios for display vs. body text. */
+:root {
+  --leading-heading: 1.2;
+  --leading-body: 1.6;
 }
