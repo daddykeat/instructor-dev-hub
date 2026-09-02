@@ -1,4 +1,7 @@
 # Instructor Development Reference Hub — Design-System Specimen
+'Repository: https://github.com/daddykeat/instructor-dev-hub
+
+'Published specimen: https://daddykeat.github.io/instructor-dev-hub
 
 A responsive, single-page design-system specimen for an instructor-development reference hub serving both instructors building curriculum and trainees completing coursework. This documents foundational tokens and reusable patterns — not a finished marketing site.
 
