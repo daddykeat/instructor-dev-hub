@@ -48,6 +48,7 @@
   --color-code-surface: var(--gray-100);
   --color-border: var(--gray-300);
   --color-action: var(--blue-800);
+  --color-link-visited: var(--blue-600);
   --color-focus: var(--blue-600);
 }
 
