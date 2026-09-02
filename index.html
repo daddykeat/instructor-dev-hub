@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
     <script>
       document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';
     </script>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Instructor Development Reference Hub</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
@@ -15,8 +15,136 @@
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="css/components.css">
   </head>
- <body>
-    <button id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+  <body>
+    <header class="prose" style="padding: var(--space-16);">
+      <nav>
+        <ul class="layout-list" style="display:flex; flex-wrap:wrap; gap: var(--space-16);">
+          <li><a href="#tokens">Tokens</a></li>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#actions">Actions</a></li>
+          <li><a href="#surfaces">Surfaces</a></li>
+          <li><a href="#controls">Controls</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+    </header>
+
+    <main style="padding: var(--space-16);">
+      <section style="margin-bottom: var(--space-section-gap);">
+        <h1>Instructor Development Reference Hub</h1>
+        <p class="prose">A design-system specimen documenting the foundations and reusable patterns for a training resource serving both instructors building curriculum and trainees completing coursework.</p>
+      </section>
+
+      <section id="tokens" style="margin-bottom: var(--space-section-gap);">
+        <h2>Token Inventory</h2>
+        <p class="prose prose--compact">Foundational design decisions, organized as primitives feeding named semantic roles.</p>
+
+        <h3>Color</h3>
+        <ul class="layout-list" style="display:flex; flex-wrap:wrap; gap: var(--space-16);">
+          <li><div style="width:80px;height:40px;background:var(--color-surface);border:1px solid var(--color-border);"></div>--color-surface</li>
+          <li><div style="width:80px;height:40px;background:var(--color-surface-raised);border:1px solid var(--color-border);"></div>--color-surface-raised</li>
+          <li><div style="width:80px;height:40px;background:var(--color-action);"></div>--color-action</li>
+          <li><div style="width:80px;height:40px;background:var(--color-focus);"></div>--color-focus</li>
+          <li><div style="width:80px;height:40px;background:var(--color-border);"></div>--color-border</li>
+        </ul>
+
+        <h3>Spacing</h3>
+        <p class="prose prose--compact">--space-card-padding (16px), --space-card-gap (24px), --space-section-gap (48px), --space-form-gap (12px) — a 4px-based scale mapped to component roles.</p>
+
+        <h3>Radius, Elevation, Measure</h3>
+        <p class="prose prose--compact">--radius-control (2px), --radius-card (6px), --radius-badge (pill). --elevation-resting / --elevation-raised for subtle depth. --measure-reading (68ch) / --measure-compact (50ch) bound paragraph line length.</p>
+      </section>
+
+      <section id="typography" style="margin-bottom: var(--space-section-gap);">
+        <h2>Typography</h2>
+        <h3>Heading Scale</h3>
+        <h4>H4 Example Heading</h4>
+        <h5>H5 Example Heading</h5>
+        <h6>H6 Example Heading</h6>
+
+        <p class="prose">This paragraph demonstrates the default reading measure at 68 characters, using the system-safe body font stack with fluid, viewport-responsive sizing bounded by clamp() between 320px and 1280px.</p>
+        <p class="prose prose--compact">This paragraph demonstrates the compact 50-character measure, suited to dense reference material like schedules.</p>
+
+        <p>Inline code example: <code>--color-action: var(--blue-800);</code></p>
+
+        <p><a href="#">A standard link</a> demonstrating default, hover, focus, and visited states.</p>
+
+        <h3>Content list (skill checklist)</h3>
+        <ul>
+          <li>Complete Module 1 assessment</li>
+          <li>Submit lesson plan draft</li>
+          <li>Review peer feedback</li>
+        </ul>
+
+        <p class="prose prose--compact" style="font-size: var(--type-meta);">Display typeface Chakra Petch by Mika Melvas, licensed under the SIL Open Font License, served via Google Fonts.</p>
+      </section>
+
+      <section id="actions" style="margin-bottom: var(--space-section-gap);">
+        <h2>Actions and States</h2>
+        <button class="btn btn-primary" type="button">Primary Action</button>
+        <button class="btn btn-secondary" type="button">Secondary Action</button>
+        <button class="btn btn-primary" type="button" disabled>Disabled</button>
+      </section>
+
+      <section id="surfaces" style="margin-bottom: var(--space-section-gap);">
+        <h2>Surfaces and Content Patterns</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Course Module: Foundations</h3>
+            <p class="prose prose--compact">A four-phase instructor development module covering orientation through assessment.</p>
+          </div>
+          <div class="card">
+            <h3>Reference: Grading Rubric</h3>
+            <p class="prose prose--compact">Quick-reference criteria for evaluating trainee submissions.</p>
+          </div>
+        </div>
+
+        <div class="notice" style="margin-top: var(--space-24);">
+          <p class="prose prose--compact">Notice: This module's assessment deadline has been moved up one week.</p>
+        </div>
+
+        <div class="media-placeholder" style="margin-top: var(--space-24); max-width: 400px;">
+          <span>16:9 media placeholder</span>
+        </div>
+      </section>
+
+      <section id="controls" style="margin-bottom: var(--space-section-gap);">
+        <h2>Control Foundations</h2>
+        <form>
+          <div class="field-group">
+            <div>
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div>
+              <label for="role">Role</label>
+              <select id="role" name="role">
+                <option>Instructor</option>
+                <option>Trainee</option>
+              </select>
+            </div>
+            <div class="checkbox-field">
+              <input type="checkbox" id="agree" name="agree">
+              <label for="agree" style="margin:0;">I agree to the terms</label>
+            </div>
+            <div class="radio-field">
+              <input type="radio" id="am" name="session" value="am">
+              <label for="am" style="margin:0;">Morning session</label>
+            </div>
+            <div class="radio-field">
+              <input type="radio" id="pm" name="session" value="pm">
+              <label for="pm" style="margin:0;">Afternoon session</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
     <script src="js/theme.js"></script>
- </body>
+  </body>
 </html>
