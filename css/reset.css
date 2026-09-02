@@ -1,0 +1,34 @@
+/* Intentional omission: Plain ul/ol keep native browser styling for content lists such as the skill checklist. */
+
+/* Usage note: Keeps cards, buttons, and form controls at their requested size when padding or borders are added. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Usage note: Resets inconsistent margins on common text elements without stripping useful default indentation and spacing from lists. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote {
+  margin: 0;
+}
+
+/* Usage note: Preserves list semantics while removing browser styling when a list is arranged as layout. */
+.layout-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Usage note: Prevents images from overflowing narrow containers while preserving their aspect ratio. */
+img {
+  max-width: 100%;
+  height: auto;
+}
