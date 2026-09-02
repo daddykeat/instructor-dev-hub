@@ -140,3 +140,76 @@ a:focus-visible {
 .btn-secondary:hover {
   background-color: var(--color-action-subtle);
 }
+
+.card {
+  padding: var(--space-card-padding);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-raised);
+  box-shadow: var(--elevation-resting);
+}
+
+.card:hover {
+  box-shadow: var(--elevation-raised);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-card-gap);
+}
+
+.notice {
+  padding: var(--space-16);
+  border-left: 4px solid var(--color-action);
+  border-radius: var(--radius-control);
+  background-color: var(--color-action-subtle);
+}
+
+.media-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-card);
+  background-color: var(--color-action-subtle);
+  color: var(--color-text);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+  font-size: var(--type-sm);
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background-color: var(--color-surface-raised);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-form-gap);
+}
+
+.checkbox-field,
+.radio-field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
