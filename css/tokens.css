@@ -17,3 +17,35 @@
   --space-section-gap: var(--space-48);
   --space-form-gap: var(--space-12);
 }
+
+/* Primitive blue scale: raw hues used to define semantic color roles across themes. */
+/* Accessibility reference: #274a63 on white has approximately 9.3:1 contrast and passes WCAG AAA. */
+:root {
+  --blue-200: #a9c6dd;
+  --blue-400: #6d9cbf;
+  --blue-600: #3d6b8f;
+  --blue-800: #274a63;
+  --blue-900: #182f3f;
+}
+
+//* Primitive gray scale: cool-toned neutrals for backgrounds, text, and borders. */
+:root {
+  --gray-0: #ffffff;
+  --gray-50: #f4f6f8;
+  --gray-100: #e2e7ec;
+  --gray-300: #b7c1cb;
+  --gray-500: #7c8894;
+  --gray-700: #4a5561;
+  --gray-900: #1c2126;
+}
+
+/* Semantic color tokens: named roles mapped to the primitive scale. */
+:root {
+  --color-text: var(--gray-700);
+  --color-text-heading: var(--gray-900);
+  --color-surface: var(--gray-50);
+  --color-surface-raised: var(--gray-0);
+  --color-border: var(--gray-300);
+  --color-action: var(--blue-800);
+  --color-focus: var(--blue-600);
+}
