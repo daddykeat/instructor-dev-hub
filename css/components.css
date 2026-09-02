@@ -98,3 +98,45 @@ a:focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
+
+.btn {
+  padding: var(--space-8) var(--space-16);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--color-action);
+  color: var(--color-on-action);
+}
+
+.btn-secondary {
+  border-color: var(--color-action);
+  background-color: transparent;
+  color: var(--color-action);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-action-subtle);
+}

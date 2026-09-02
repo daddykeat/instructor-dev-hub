@@ -7,6 +7,8 @@
   --color-text-heading: var(--gray-0);
   --color-border: var(--gray-500);
   --color-action: var(--blue-200);
+  --color-on-action: var(--gray-900);
+  --color-action-subtle: var(--blue-900);
   --color-link-visited: var(--blue-400);
   --color-focus: var(--blue-400);
 }
