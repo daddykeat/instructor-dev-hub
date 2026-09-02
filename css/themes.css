@@ -2,9 +2,11 @@
 [data-theme="dark"] {
   --color-surface: var(--gray-900);
   --color-surface-raised: var(--blue-900);
+  --color-code-surface: var(--gray-700);
   --color-text: var(--gray-100);
   --color-text-heading: var(--gray-0);
   --color-border: var(--gray-500);
   --color-action: var(--blue-200);
+  --color-link-visited: var(--blue-400);
   --color-focus: var(--blue-400);
 }
