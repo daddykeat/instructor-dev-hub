@@ -28,7 +28,7 @@
   --blue-900: #182f3f;
 }
 
-//* Primitive gray scale: cool-toned neutrals for backgrounds, text, and borders. */
+/* Primitive gray scale: cool-toned neutrals for backgrounds, text, and borders. */
 :root {
   --gray-0: #ffffff;
   --gray-50: #f4f6f8;
@@ -48,4 +48,30 @@
   --color-border: var(--gray-300);
   --color-action: var(--blue-800);
   --color-focus: var(--blue-600);
+}
+
+/* Primitive measure tokens: line-length constraints for readable text blocks. */
+:root {
+  --measure-50: 50ch;
+  --measure-68: 68ch;
+}
+
+/* Semantic measure tokens: named reading-width roles mapped to the primitive scale. */
+:root {
+  --measure-compact: var(--measure-50);
+  --measure-reading: var(--measure-68);
+}
+
+/* Primitive radius tokens: corner-rounding scale from sharp to pill-shaped. */
+:root {
+  --radius-2: 2px;
+  --radius-6: 6px;
+  --radius-full: 999px;
+}
+
+/* Semantic radius tokens: named roles mapped to the primitive scale. */
+:root {
+  --radius-control: var(--radius-2);
+  --radius-card: var(--radius-6);
+  --radius-badge: var(--radius-full);
 }
